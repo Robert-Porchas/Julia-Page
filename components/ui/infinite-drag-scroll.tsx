@@ -8,6 +8,9 @@ import {
   wrap,
 } from "motion/react";
 import {
+  type AriaRole,
+  type KeyboardEventHandler,
+  type MouseEventHandler,
   memo,
   useContext,
   useEffect,
@@ -126,9 +129,19 @@ export const DraggableContainer = ({
 export const GridItem = ({
   children,
   className,
+  onClick,
+  onKeyDown,
+  tabIndex,
+  role,
+  "aria-label": ariaLabel,
 }: {
   children: React.ReactNode;
   className?: string;
+  onClick?: MouseEventHandler<HTMLDivElement>;
+  onKeyDown?: KeyboardEventHandler<HTMLDivElement>;
+  tabIndex?: number;
+  role?: AriaRole;
+  "aria-label"?: string;
 }) => {
   const variant = useContext(GridVariantContext);
 
@@ -155,6 +168,11 @@ export const GridItem = ({
       variants={rowVariants}
       initial="initial"
       animate="animate"
+      onClick={onClick}
+      onKeyDown={onKeyDown}
+      tabIndex={tabIndex}
+      role={role}
+      aria-label={ariaLabel}
     >
       {children}
     </motion.div>
