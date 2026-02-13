@@ -101,7 +101,7 @@ export const DraggableContainer = ({
         >
           <motion.div
             className={cn(
-              "grid h-fit w-fit cursor-grab grid-cols-[repeat(2,1fr)] bg-[#141414] active:cursor-grabbing will-change-transform",
+              "grid h-fit w-fit cursor-grab grid-cols-[repeat(2,1fr)] bg-[#B91372] active:cursor-grabbing will-change-transform",
               className,
             )}
             drag
