@@ -52,7 +52,7 @@ export function PhotoDetailOverlay({
             role="dialog"
             aria-modal="true"
             aria-labelledby={`photo-detail-dialog-title-${picture.id}`}
-            className="relative z-10 flex w-full max-w-4xl flex-col items-center justify-center"
+            className="relative z-10 inline-flex w-fit max-w-[calc(100vw-1.5rem)] flex-col items-center justify-center"
             initial={{ opacity: 0, scale: 0.94, y: 18 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98, y: 12 }}
@@ -65,7 +65,7 @@ export function PhotoDetailOverlay({
             >
               {picture.title}
             </h2>
-            <div className="relative z-30 flex w-full items-center justify-center p-3 md:p-5">
+            <div className="relative z-30 flex w-fit items-center justify-center p-2 md:p-4">
               <div className="relative flex h-[56dvh] min-h-[280px] w-fit items-center justify-center md:h-[72dvh] md:max-h-[72dvh]">
                 <motion.img
                   src={picture.src}
@@ -77,14 +77,14 @@ export function PhotoDetailOverlay({
                 />
 
                 <motion.aside
-                  className="absolute inset-y-0 left-full z-10 hidden w-[300px] -translate-x-20 rounded-r-2xl bg-[#171717] p-7 text-white shadow-[0_16px_50px_rgba(0,0,0,0.4)] md:block"
+                  className="absolute inset-y-0 left-full z-10 hidden w-[300px] -translate-x-20 rounded-r-2xl border border-white/25 bg-white/10 p-7 text-white shadow-[0_16px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl md:block"
                   initial={{ x: -120, opacity: 0 }}
                   animate={{ x: 72, opacity: 1 }}
                   exit={{ x: -80, opacity: 0 }}
                   transition={{ duration: 0.4, delay: 0.08, ease: [0.18, 0.71, 0.11, 1] }}
                 >
                   <h2 className="text-2xl font-semibold tracking-tight">{picture.title}</h2>
-                  <p className="mt-4 text-base leading-relaxed text-zinc-300">
+                  <p className="mt-4 text-base leading-relaxed text-zinc-100/90">
                     {picture.description}
                   </p>
                 </motion.aside>
@@ -92,14 +92,14 @@ export function PhotoDetailOverlay({
             </div>
 
             <motion.aside
-              className="mt-3 w-[92%] max-w-[720px] rounded-r-2xl bg-[#171717] p-6 text-white shadow-[0_16px_50px_rgba(0,0,0,0.4)] md:hidden"
+              className="mt-3 w-[92%] max-w-[720px] rounded-r-2xl border border-white/25 bg-white/10 p-6 text-white shadow-[0_16px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl md:hidden"
               initial={{ y: 12, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 8, opacity: 0 }}
               transition={{ duration: 0.25, delay: 0.08, ease: [0.18, 0.71, 0.11, 1] }}
             >
               <h2 className="text-2xl font-semibold tracking-tight">{picture.title}</h2>
-              <p className="mt-4 text-base leading-relaxed text-zinc-300">
+              <p className="mt-4 text-base leading-relaxed text-zinc-100/90">
                 {picture.description}
               </p>
             </motion.aside>
