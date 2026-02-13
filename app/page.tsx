@@ -30,7 +30,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="h-dvh w-screen overflow-hidden bg-[#141414]">
+    <main className="h-dvh w-screen overflow-hidden bg-pink-300">
       <DraggableContainer className="h-fit w-fit" variant="polaroid">
         <GridBody>
           {pictures.map((picture) => (
