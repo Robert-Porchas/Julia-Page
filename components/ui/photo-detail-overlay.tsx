@@ -67,14 +67,18 @@ export function PhotoDetailOverlay({
             </h2>
             <div className="relative z-30 flex w-fit items-center justify-center p-2 md:p-4">
               <div className="relative flex h-[56dvh] min-h-[280px] w-fit items-center justify-center md:h-[72dvh] md:max-h-[72dvh]">
-                <motion.img
-                  src={picture.src}
-                  alt={picture.alt}
-                  className="relative z-30 h-full w-auto max-w-[min(72vw,760px)] rounded-lg object-contain shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
+                <motion.div
+                  className="relative z-30 h-full w-fit max-w-[min(72vw,760px)] border-[10px] border-b-[28px] border-white bg-white shadow-xl"
                   initial={{ scale: 0.96, opacity: 0.8 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.45, ease: [0.18, 0.71, 0.11, 1] }}
-                />
+                >
+                  <img
+                    src={picture.src}
+                    alt={picture.alt}
+                    className="h-full w-auto object-contain"
+                  />
+                </motion.div>
 
                 <motion.aside
                   className="absolute inset-y-0 left-full z-10 hidden w-[300px] -translate-x-20 rounded-r-2xl border border-white/25 bg-white/10 p-7 text-white shadow-[0_16px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl md:block"
@@ -92,7 +96,7 @@ export function PhotoDetailOverlay({
             </div>
 
             <motion.aside
-              className="mt-3 w-[92%] max-w-[720px] rounded-r-2xl border border-white/25 bg-white/10 p-6 text-white shadow-[0_16px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl md:hidden"
+              className="mt-3 w-[92%] max-w-[720px] rounded-2xl border border-white/25 bg-white/10 p-6 text-white shadow-[0_16px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl md:hidden"
               initial={{ y: 12, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 8, opacity: 0 }}
