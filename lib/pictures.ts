@@ -58,7 +58,7 @@ const pictureText: Record<
   },
   "PahrumpShirt.avif": {
     title: "Peak Shirt",
-    description: "I can't remember which time this was, this may have been the one where I was super grumpy, but this photo is so funny to me. I remember pointing it out to you and this pose you did is so cute, I love how you look like you weren't trying to be pretty and yet you still looked so pretty.",
+    description: "I can't remember which time this was, this may have been the one where I was super grumpy, but this photo is so funny to me. I remember pointing it out to you and this pose you did is so cute, I love how you look like you were just trying to be funny and cute and yet you still looked so pretty.",
   },
   "Prom.avif": {
     title: "Prom",
